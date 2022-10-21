@@ -1,16 +1,25 @@
 import React from 'react'
+import { Card } from 'primereact/card'
+
 const Accordion = ( { itens }) => {
+    const expressaoJSX = itens.map((item, indice) => {
+        return (
+            <Card key={indice} className="border-1 border-400">
+                <div>
+                    <i className="pi pi-angle-down"></i>
+                    <h5 className="inline ml-3">{item.titulo}</h5>
+                </div>
+                    <p>{item.conteudo}</p>
+            </Card>
+        )
+    })
+
     return (
         <div>   
             {
-                itens.map((item, indice) => (
-                    <div key={indice}>
-                        <h4 >{item.titulo}</h4>
-                        <p>{item.conteudo}</p>
-                    </div>
-            ))
+                expressaoJSX
             }
-            </div>
+        </div>
     )
 }
 

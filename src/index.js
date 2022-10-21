@@ -6,6 +6,6 @@ import "primeicons/primeicons.css";                                //icons
 import "primeflex/primeflex.css";
 
 ReactDOM.render(
-<App />,
-document.querySelector('#root')
+  <App />,
+  document.querySelector('#root')
 )
